@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Space Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><div class="wrap"><a class="logo" href="index.html">Space<span>Explorer</span></a>
+<nav><a href="index.html">Home</a><a href="planets.html">Planets</a><a href="missions.html">Missions</a><a href="contact.html" class="active">Contact</a></nav></div></header>
+<main class="page"><div class="wrap cols"><div><h1>About and contact</h1>
+<p class="lead">Space Explorer is a college project built with HTML and CSS. It covers the planets of our solar system and key missions in space history.</p>
+<p>Have a question or a fact to suggest? Send a message using the form.</p></div>
+<form id="f"><label>Name<input name="name" required></label>
+<label>Email<input type="email" name="email" required></label>
+<label>Favorite planet<select name="planet"><option>Mercury</option><option>Venus</option><option selected>Earth</option><option>Mars</option><option>Jupiter</option><option>Saturn</option><option>Uranus</option><option>Neptune</option></select></label>
+<label>Message<textarea name="m" rows="4" required></textarea></label>
+<button class="btn" type="submit">Send message</button><p id="msg" role="status"></p></form></div></main>
+<script>document.getElementById("f").addEventListener("submit",function(e){e.preventDefault();document.getElementById("msg").textContent="Thanks, "+this.name.value+". Your message was sent.";this.reset()})</script>
+<footer><div class="wrap">Space Explorer, a college project. Facts are rounded and sourced from NASA public pages.</div></footer></body></html>
